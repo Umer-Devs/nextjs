@@ -21,7 +21,7 @@ const Page = () => {
   const handleSubmit = async (e:any) => {
     e.preventDefault();
     try {
-      // Send data to backend API
+      
       const response = await fetch("/api/login", {
         method: "POST",
         headers: {
@@ -33,14 +33,14 @@ const Page = () => {
       if (response.ok) {
         const data = await response.json();
         console.log("Success:", data);
-        // Handle success (e.g., redirect, show message, etc.)
+        
       } else {
         console.error("Error:", response.statusText);
-        // Handle error (e.g., show error message)
+        
       }
     } catch (error) {
       console.error("Request failed:", error);
-      // Handle network or other errors
+      
     }
   };
 
@@ -49,7 +49,7 @@ const Page = () => {
       <section className="min-h-screen w-full flex flex-col justify-center items-center bg-gray-200 px-2">
         <div className="max-w-4xl bg-white flex flex-col border items-center justify-center gap-4 md:gap-8 p-4 md:p-8 rounded-md">
           <div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold italic underline text-[#9FC85E]">
+            <h1 className="text-3xl md:text-4xl text-center  lg:text-5xl xl:text-6xl font-bold italic underline text-[#9FC85E]">
               Opal Time Card
             </h1>
             <p className="md:text-lg text-center my-3 text-[#2D465E] tracking-wider font-semibold">
